@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.6.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.6.2.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="e3b471b9-5514-45f3-9aa6-b830efe350a0" data-root-id="p8713" style="display: contents;"></div>
+  
+    <script type="application/json" id="a86a86ac-4962-40c0-9a82-2469bbc42b25">
+      {"79d15f38-9375-40d3-a9f9-533b55ac22fc":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p8713","attributes":{"children":[{"type":"object","name":"Select","id":"p8711","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"type":"object","name":"CustomJS","id":"p8712","attributes":{"args":{"type":"map","entries":[["source",{"type":"object","name":"ColumnDataSource","id":"p8663","attributes":{"selected":{"type":"object","name":"Selection","id":"p8664","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p8665"},"data":{"type":"map","entries":[["left",[0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100]],["right",[5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105]],["top",{"type":"ndarray","array":{"type":"bytes","data":"ywEAAJgEAADlAgAAiAMAAJsJAAA9AAAACAAAAIoAAAACAAAAhwQAAAAAAAAMAAAAFgAAAAEAAAAnAAAABgAAAAEAAAABAAAAAAAAAGIAAAAAAAAA"},"shape":[21],"dtype":"int32","order":"little"}]]}}}],["full_data",{"type":"map","entries":[["left",[0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100]],["right",[5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105]],["all",{"type":"ndarray","array":{"type":"bytes","data":"ywEAAJgEAADlAgAAiAMAAJsJAAA9AAAACAAAAIoAAAACAAAAhwQAAAAAAAAMAAAAFgAAAAEAAAAnAAAABgAAAAEAAAABAAAAAAAAAGIAAAAAAAAA"},"shape":[21],"dtype":"int32","order":"little"}],["pre",{"type":"ndarray","array":{"type":"bytes","data":"CwEAAOgCAACqAQAAvwEAAJ8DAAAbAAAABgAAAC8AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"shape":[21],"dtype":"int32","order":"little"}],["post",{"type":"ndarray","array":{"type":"bytes","data":"wAAAALABAAA7AQAAyQEAAPwFAAAiAAAAAgAAAFsAAAABAAAAaQIAAAAAAAAFAAAAEgAAAAAAAAAXAAAAAwAAAAEAAAABAAAAAAAAAAAAAAAAAAAA"},"shape":[21],"dtype":"int32","order":"little"}]]}],["select",{"id":"p8711"}]]},"code":"\n    const f = select.value.toLowerCase();\n    source.data.top = full_data[f];\n    source.change.emit();\n"}}]]]},"title":"Select Wave:","options":["All","pre","post"],"value":"All"}},{"type":"object","name":"Figure","id":"p8666","attributes":{"width":800,"height":400,"x_range":{"type":"object","name":"DataRange1d","id":"p8667"},"y_range":{"type":"object","name":"DataRange1d","id":"p8668"},"x_scale":{"type":"object","name":"LinearScale","id":"p8676"},"y_scale":{"type":"object","name":"LinearScale","id":"p8677"},"title":{"type":"object","name":"Title","id":"p8669","attributes":{"text":"Vitamin D Intake Distribution"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p8707","attributes":{"data_source":{"id":"p8663"},"view":{"type":"object","name":"CDSView","id":"p8708","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p8709"}}},"glyph":{"type":"object","name":"Quad","id":"p8704","attributes":{"left":{"type":"field","field":"left"},"right":{"type":"field","field":"right"},"bottom":{"type":"value","value":0},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"white"},"fill_color":{"type":"value","value":"green"}}},"nonselection_glyph":{"type":"object","name":"Quad","id":"p8705","attributes":{"left":{"type":"field","field":"left"},"right":{"type":"field","field":"right"},"bottom":{"type":"value","value":0},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"white"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"green"},"fill_alpha":{"type":"value","value":0.1},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Quad","id":"p8706","attributes":{"left":{"type":"field","field":"left"},"right":{"type":"field","field":"right"},"bottom":{"type":"value","value":0},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"white"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"green"},"fill_alpha":{"type":"value","value":0.2},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p8675","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p8688"},{"type":"object","name":"WheelZoomTool","id":"p8689","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p8690","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p8691","attributes":{"syncable":false,"line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","handles":{"type":"object","name":"BoxInteractionHandles","id":"p8697","attributes":{"all":{"type":"object","name":"AreaVisuals","id":"p8696","attributes":{"fill_color":"white","hover_fill_color":"lightgray"}}}}}}}},{"type":"object","name":"SaveTool","id":"p8698"},{"type":"object","name":"ResetTool","id":"p8699"},{"type":"object","name":"HelpTool","id":"p8700"},{"type":"object","name":"HoverTool","id":"p8710","attributes":{"renderers":"auto","tooltips":[["Range","@left - @right"],["Count","@top"]]}}]}},"left":[{"type":"object","name":"LinearAxis","id":"p8683","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p8684","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p8685"},"axis_label":"Frequency","major_label_policy":{"type":"object","name":"AllLabels","id":"p8686"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p8678","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p8679","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p8680"},"axis_label":"Vitamin D (nmol/L)","major_label_policy":{"type":"object","name":"AllLabels","id":"p8681"}}}],"center":[{"type":"object","name":"Grid","id":"p8682","attributes":{"axis":{"id":"p8678"}}},{"type":"object","name":"Grid","id":"p8687","attributes":{"dimension":1,"axis":{"id":"p8683"}}}]}}]}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('a86a86ac-4962-40c0-9a82-2469bbc42b25').textContent;
+              const render_items = [{"docid":"79d15f38-9375-40d3-a9f9-533b55ac22fc","roots":{"p8713":"e3b471b9-5514-45f3-9aa6-b830efe350a0"},"root_ids":["p8713"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
